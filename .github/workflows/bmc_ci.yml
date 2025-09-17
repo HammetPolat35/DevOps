@@ -67,7 +67,7 @@ jobs:
         line_cov=$(lcov --summary coverage_filtered.info | grep "lines" | awk '{print $2}' | tr -d '%')
         echo "Line coverage: $line_cov%"
         cov_int=${line_cov%.*}
-        if [ "$cov_int" -lt 10 ]; then
+        if [ "$cov_int" -lt 101 ]; then
           echo "❌ Coverage ($cov_int%) is below threshold (10%)"
           exit 1
         else
