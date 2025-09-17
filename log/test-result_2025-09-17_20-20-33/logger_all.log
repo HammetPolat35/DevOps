@@ -1,0 +1,22 @@
+[0.308s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/home/bmcotonom1/.local/bin/colcon', 'test-result', '--all'][0m
+[0.308s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(all=True, delete=False, delete_yes=False, log_base=None, log_level=None, main=<bound method TestResultVerb.main of <colcon_test_result.verb.test_result.TestResultVerb object at 0x7f8e9c9a8760>>, result_files_only=False, test_result_base='build', verb_extension=<colcon_test_result.verb.test_result.TestResultVerb object at 0x7f8e9c9a8760>, verb_name='test-result', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f8e9c8a5c40>, verbose=False)[0m
+[0.311s] [34mcolcon.colcon_test_result.test_result[0m [1;30mLevel 1[0m get_test_results(ctest)
+[0.315s] [34mcolcon.colcon_test_result.test_result[0m [1;30mLevel 1[0m get_test_results(xunit)
+[0.317s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0529/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.318s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0604/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.319s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0611/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.320s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0613/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.321s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0619/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.322s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0620/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.322s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0627/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.323s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0644/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.324s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0728/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.325s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0759/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.325s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0804/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.326s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0817/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.327s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0826/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.328s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0832/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.328s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250916-0840/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.329s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250917-1239/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.330s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250917-1648/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m
+[0.330s] [34mcolcon.colcon_test_result.test_result.xunit[0m [1;30mDEBUG[0m [32mSkipping 'build/cpp_pubsub/Testing/20250917-1720/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'[0m

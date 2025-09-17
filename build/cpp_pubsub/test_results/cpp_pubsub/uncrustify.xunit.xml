@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="cpp_pubsub.uncrustify"
+  tests="3"
+  failures="1"
+  errors="0"
+  time="0.009"
+>
+  <testcase
+    name="src/publisher_member_function.cpp"
+    classname="cpp_pubsub.uncrustify"/>
+  <testcase
+    name="src/subscriber_member_function.cpp"
+    classname="cpp_pubsub.uncrustify"/>
+  <testcase
+    name="test/test_my_node.cpp"
+    classname="cpp_pubsub.uncrustify"
+  >
+      <failure message="Diff with 4 lines"><![CDATA[--- test/test_my_node.cpp
++++ test/test_my_node.cpp.uncrustify
+@@ -7 +6,0 @@
+-
+]]></failure>
+  </testcase>
+  <system-out>Checked files:
+* src/publisher_member_function.cpp
+* src/subscriber_member_function.cpp
+* test/test_my_node.cpp</system-out>
+</testsuite>

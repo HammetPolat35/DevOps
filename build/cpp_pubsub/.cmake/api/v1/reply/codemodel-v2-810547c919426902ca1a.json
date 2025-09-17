@@ -1,0 +1,146 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "gtest",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/opt/ros/foxy/src/gtest_vendor",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cpp_pubsub",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "gtest",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cpp_pubsub_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cpp_pubsub_uninstall-61cf49591d9880e59bb4.json",
+					"name" : "cpp_pubsub_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gtest::@0af4add9fe94340e763e",
+					"jsonFile" : "target-gtest-2113691e78cf39beb899.json",
+					"name" : "gtest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gtest_main::@0af4add9fe94340e763e",
+					"jsonFile" : "target-gtest_main-5f8755bde032a56afe10.json",
+					"name" : "gtest_main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "listener::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-listener-f61520d1c50bcf16a6ce.json",
+					"name" : "listener",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "talker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-talker-7e2e6f298641fa6688f9.json",
+					"name" : "talker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_my_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_my_node-c2b94f680737dc8f4037.json",
+					"name" : "test_my_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-eaf6b0b23d4fd8742547.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub",
+		"source" : "/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

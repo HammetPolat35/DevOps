@@ -1,0 +1,194 @@
+[0.000000] (-) TimerEvent: {}
+[0.000248] (cpp_pubsub) JobQueued: {'identifier': 'cpp_pubsub', 'dependencies': OrderedDict([('cpp_pubsub', '/home/bmcotonom1/DevOps/install/cpp_pubsub')])}
+[0.000311] (cpp_pubsub) JobStarted: {'identifier': 'cpp_pubsub'}
+[0.020269] (cpp_pubsub) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Release', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process'], 'cwd': '/home/bmcotonom1/DevOps/build/cpp_pubsub', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bmcotonom1'), ('LC_TIME', 'tr_TR.UTF-8'), ('SSH_AGENT_PID', '1704'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/bmcotonom1'), ('OLDPWD', '/home/bmcotonom1/DevOps/src/cpp_pubsub/test'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1598'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bmcotonom1/DevOps/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'bmcotonom1'), ('JOURNAL_STREAM', '8:53428'), ('_', '/home/bmcotonom1/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bmcotonom1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/bmcotonom1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bmcotonom1/.local/bin'), ('SESSION_MANAGER', 'local/bmcotonom1-GE75-Raider-9SF:@/tmp/.ICE-unix/1742,unix/bmcotonom1-GE75-Raider-9SF:/tmp/.ICE-unix/1742'), ('INVOCATION_ID', '30aa73add3d04c2eb5bf3355f57ffe25'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d8a4d11b_4564_497b_a748_bdde5d1b7f26'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.92'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bmcotonom1/DevOps/install/cpp_pubsub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bmcotonom1/DevOps/build/cpp_pubsub'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bmcotonom1/DevOps/install/cpp_pubsub')]), 'shell': False}
+[0.030488] (cpp_pubsub) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini\n'}
+[0.030857] (cpp_pubsub) StdoutLine: {'line': b'Parse Config file:/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini\n'}
+[0.031271] (cpp_pubsub) StdoutLine: {'line': b'   Site: bmcotonom1-GE75-Raider-9SF\n'}
+[0.031334] (cpp_pubsub) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[0.031387] (cpp_pubsub) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[0.031437] (cpp_pubsub) StdoutLine: {'line': b'SetCTestConfiguration:CMakeCommand:/usr/bin/cmake\n'}
+[0.031486] (cpp_pubsub) StdoutLine: {'line': b'Create new tag: 20250916-0613 - Experimental\n'}
+[0.031534] (cpp_pubsub) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini\n'}
+[0.031604] (cpp_pubsub) StdoutLine: {'line': b'Parse Config file:/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini\n'}
+[0.032017] (cpp_pubsub) StdoutLine: {'line': b'Test project /home/bmcotonom1/DevOps/build/cpp_pubsub\n'}
+[0.032250] (cpp_pubsub) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[0.032308] (cpp_pubsub) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[0.032360] (cpp_pubsub) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[0.032449] (cpp_pubsub) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[0.032498] (cpp_pubsub) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[0.032546] (cpp_pubsub) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[0.032594] (cpp_pubsub) StdoutLine: {'line': b'test 1\n'}
+[0.032642] (cpp_pubsub) StdoutLine: {'line': b'    Start 1: test_my_node\n'}
+[0.032690] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[0.032739] (cpp_pubsub) StdoutLine: {'line': b'1: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_cmake_gtest/test_my_node.txt" "--command" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_my_node" "--gtest_output=xml:/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml"\n'}
+[0.032819] (cpp_pubsub) StdoutLine: {'line': b'1: Test timeout computed to be: 60\n'}
+[0.076143] (cpp_pubsub) StdoutLine: {'line': b"1: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/build/cpp_pubsub':\n"}
+[0.076296] (cpp_pubsub) StdoutLine: {'line': b'1:  - /home/bmcotonom1/DevOps/build/cpp_pubsub/test_my_node --gtest_output=xml:/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml\n'}
+[0.078309] (cpp_pubsub) StdoutLine: {'line': b'1: Running main() from /opt/ros/foxy/src/gtest_vendor/src/gtest_main.cc\n'}
+[0.078541] (cpp_pubsub) StdoutLine: {'line': b'1: [==========] Running 1 test from 1 test case.\n'}
+[0.078601] (cpp_pubsub) StdoutLine: {'line': b'1: [----------] Global test environment set-up.\n'}
+[0.078654] (cpp_pubsub) StdoutLine: {'line': b'1: [----------] 1 test from SanityCheck\n'}
+[0.078704] (cpp_pubsub) StdoutLine: {'line': b'1: [ RUN      ] SanityCheck.BasicAssertion\n'}
+[0.078762] (cpp_pubsub) StdoutLine: {'line': b'1: [       OK ] SanityCheck.BasicAssertion (0 ms)\n'}
+[0.078810] (cpp_pubsub) StdoutLine: {'line': b'1: [----------] 1 test from SanityCheck (0 ms total)\n'}
+[0.078858] (cpp_pubsub) StdoutLine: {'line': b'1: \n'}
+[0.078906] (cpp_pubsub) StdoutLine: {'line': b'1: [----------] Global test environment tear-down\n'}
+[0.078954] (cpp_pubsub) StdoutLine: {'line': b'1: [==========] 1 test from 1 test case ran. (0 ms total)\n'}
+[0.079021] (cpp_pubsub) StdoutLine: {'line': b'1: [  PASSED  ] 1 test.\n'}
+[0.079227] (cpp_pubsub) StdoutLine: {'line': b'1: -- run_test.py: return code 0\n'}
+[0.079507] (cpp_pubsub) StdoutLine: {'line': b"1: -- run_test.py: inject classname prefix into gtest result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml'\n"}
+[0.079735] (cpp_pubsub) StdoutLine: {'line': b"1: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml'\n"}
+[0.086385] (cpp_pubsub) StdoutLine: {'line': b'1/7 Test #1: test_my_node .....................   Passed    0.05 sec\n'}
+[0.086581] (cpp_pubsub) StdoutLine: {'line': b'test 2\n'}
+[0.086642] (cpp_pubsub) StdoutLine: {'line': b'    Start 2: copyright\n'}
+[0.086696] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[0.086747] (cpp_pubsub) StdoutLine: {'line': b'2: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_copyright/copyright.txt" "--command" "/opt/ros/foxy/bin/ament_copyright" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml"\n'}
+[0.086833] (cpp_pubsub) StdoutLine: {'line': b'2: Test timeout computed to be: 60\n'}
+[0.099339] (-) TimerEvent: {}
+[0.131908] (cpp_pubsub) StdoutLine: {'line': b"2: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':\n"}
+[0.132037] (cpp_pubsub) StdoutLine: {'line': b'2:  - /opt/ros/foxy/bin/ament_copyright --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml\n'}
+[0.199455] (-) TimerEvent: {}
+[0.299678] (-) TimerEvent: {}
+[0.333160] (cpp_pubsub) StdoutLine: {'line': b'2: /opt/ros/foxy/bin/ament_copyright:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n'}
+[0.333281] (cpp_pubsub) StdoutLine: {'line': b'2:   from pkg_resources import load_entry_point\n'}
+[0.333338] (cpp_pubsub) StdoutLine: {'line': b'2: test/test_my_node.cpp: could not find copyright notice\n'}
+[0.333396] (cpp_pubsub) StdoutLine: {'line': b'2: 1 errors, checked 3 files\n'}
+[0.344135] (cpp_pubsub) StdoutLine: {'line': b'2: -- run_test.py: return code 1\n'}
+[0.344428] (cpp_pubsub) StdoutLine: {'line': b"2: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml'\n"}
+[0.351536] (cpp_pubsub) StdoutLine: {'line': b'2/7 Test #2: copyright ........................***Failed    0.26 sec\n'}
+[0.351848] (cpp_pubsub) StdoutLine: {'line': b'test 3\n'}
+[0.351940] (cpp_pubsub) StdoutLine: {'line': b'    Start 3: cppcheck\n'}
+[0.352015] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[0.352080] (cpp_pubsub) StdoutLine: {'line': b'3: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/foxy/bin/ament_cppcheck" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml"\n'}
+[0.352146] (cpp_pubsub) StdoutLine: {'line': b'3: Test timeout computed to be: 300\n'}
+[0.396295] (cpp_pubsub) StdoutLine: {'line': b"3: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':\n"}
+[0.396446] (cpp_pubsub) StdoutLine: {'line': b'3:  - /opt/ros/foxy/bin/ament_cppcheck --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml\n'}
+[0.399768] (-) TimerEvent: {}
+[0.499981] (-) TimerEvent: {}
+[0.589126] (cpp_pubsub) StdoutLine: {'line': b'3: /opt/ros/foxy/bin/ament_cppcheck:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n'}
+[0.589252] (cpp_pubsub) StdoutLine: {'line': b'3:   from pkg_resources import load_entry_point\n'}
+[0.589309] (cpp_pubsub) StdoutLine: {'line': b'3: No problems found\n'}
+[0.600088] (-) TimerEvent: {}
+[0.601288] (cpp_pubsub) StdoutLine: {'line': b'3: -- run_test.py: return code 0\n'}
+[0.601573] (cpp_pubsub) StdoutLine: {'line': b"3: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml'\n"}
+[0.608621] (cpp_pubsub) StdoutLine: {'line': b'3/7 Test #3: cppcheck .........................   Passed    0.26 sec\n'}
+[0.608908] (cpp_pubsub) StdoutLine: {'line': b'test 4\n'}
+[0.609000] (cpp_pubsub) StdoutLine: {'line': b'    Start 4: cpplint\n'}
+[0.609088] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[0.609140] (cpp_pubsub) StdoutLine: {'line': b'4: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_cpplint/cpplint.txt" "--command" "/opt/ros/foxy/bin/ament_cpplint" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml"\n'}
+[0.609199] (cpp_pubsub) StdoutLine: {'line': b'4: Test timeout computed to be: 120\n'}
+[0.653150] (cpp_pubsub) StdoutLine: {'line': b"4: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':\n"}
+[0.653292] (cpp_pubsub) StdoutLine: {'line': b'4:  - /opt/ros/foxy/bin/ament_cpplint --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml\n'}
+[0.700197] (-) TimerEvent: {}
+[0.800430] (-) TimerEvent: {}
+[0.864944] (cpp_pubsub) StdoutLine: {'line': b'4: /opt/ros/foxy/bin/ament_cpplint:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n'}
+[0.865190] (cpp_pubsub) StdoutLine: {'line': b'4:   from pkg_resources import load_entry_point\n'}
+[0.865251] (cpp_pubsub) StdoutLine: {'line': b'4: /home/bmcotonom1/DevOps/src/cpp_pubsub/test/test_my_node.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]\n'}
+[0.865307] (cpp_pubsub) StdoutLine: {'line': b"4: Category 'legal/copyright' errors found: 1\n"}
+[0.865359] (cpp_pubsub) StdoutLine: {'line': b'4: Total errors found: 1\n'}
+[0.865409] (cpp_pubsub) StdoutLine: {'line': b"4: Using '--root=/home/bmcotonom1/DevOps/src/cpp_pubsub/src' argument\n"}
+[0.865458] (cpp_pubsub) StdoutLine: {'line': b'4: \n'}
+[0.865507] (cpp_pubsub) StdoutLine: {'line': b'4: Done processing /home/bmcotonom1/DevOps/src/cpp_pubsub/src/publisher_member_function.cpp\n'}
+[0.865557] (cpp_pubsub) StdoutLine: {'line': b'4: \n'}
+[0.865606] (cpp_pubsub) StdoutLine: {'line': b'4: Done processing /home/bmcotonom1/DevOps/src/cpp_pubsub/src/subscriber_member_function.cpp\n'}
+[0.865687] (cpp_pubsub) StdoutLine: {'line': b'4: \n'}
+[0.865750] (cpp_pubsub) StdoutLine: {'line': b"4: Using '--root=/home/bmcotonom1/DevOps/src/cpp_pubsub/test' argument\n"}
+[0.865800] (cpp_pubsub) StdoutLine: {'line': b'4: \n'}
+[0.865849] (cpp_pubsub) StdoutLine: {'line': b'4: Done processing /home/bmcotonom1/DevOps/src/cpp_pubsub/test/test_my_node.cpp\n'}
+[0.865899] (cpp_pubsub) StdoutLine: {'line': b'4: \n'}
+[0.875392] (cpp_pubsub) StdoutLine: {'line': b'4: -- run_test.py: return code 1\n'}
+[0.875720] (cpp_pubsub) StdoutLine: {'line': b"4: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml'\n"}
+[0.882667] (cpp_pubsub) StdoutLine: {'line': b'4/7 Test #4: cpplint ..........................***Failed    0.27 sec\n'}
+[0.882909] (cpp_pubsub) StdoutLine: {'line': b'test 5\n'}
+[0.882985] (cpp_pubsub) StdoutLine: {'line': b'    Start 5: lint_cmake\n'}
+[0.883074] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[0.883127] (cpp_pubsub) StdoutLine: {'line': b'5: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/foxy/bin/ament_lint_cmake" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml"\n'}
+[0.883189] (cpp_pubsub) StdoutLine: {'line': b'5: Test timeout computed to be: 60\n'}
+[0.900529] (-) TimerEvent: {}
+[0.926230] (cpp_pubsub) StdoutLine: {'line': b"5: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':\n"}
+[0.926401] (cpp_pubsub) StdoutLine: {'line': b'5:  - /opt/ros/foxy/bin/ament_lint_cmake --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml\n'}
+[1.000651] (-) TimerEvent: {}
+[1.100890] (-) TimerEvent: {}
+[1.106510] (cpp_pubsub) StdoutLine: {'line': b'5: /opt/ros/foxy/bin/ament_lint_cmake:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n'}
+[1.106616] (cpp_pubsub) StdoutLine: {'line': b'5:   from pkg_resources import load_entry_point\n'}
+[1.106672] (cpp_pubsub) StdoutLine: {'line': b'5: CMakeLists.txt:39: Line ends in whitespace [whitespace/eol]\n'}
+[1.106725] (cpp_pubsub) StdoutLine: {'line': b'5: CMakeLists.txt:44: Line ends in whitespace [whitespace/eol]\n'}
+[1.106776] (cpp_pubsub) StdoutLine: {'line': b'5: \n'}
+[1.106825] (cpp_pubsub) StdoutLine: {'line': b'5: \n'}
+[1.106874] (cpp_pubsub) StdoutLine: {'line': b'5: 2 errors\n'}
+[1.116572] (cpp_pubsub) StdoutLine: {'line': b'5: -- run_test.py: return code 1\n'}
+[1.116761] (cpp_pubsub) StdoutLine: {'line': b"5: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml'\n"}
+[1.123658] (cpp_pubsub) StdoutLine: {'line': b'5/7 Test #5: lint_cmake .......................***Failed    0.24 sec\n'}
+[1.123842] (cpp_pubsub) StdoutLine: {'line': b'test 6\n'}
+[1.123900] (cpp_pubsub) StdoutLine: {'line': b'    Start 6: uncrustify\n'}
+[1.123953] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[1.124024] (cpp_pubsub) StdoutLine: {'line': b'6: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/foxy/bin/ament_uncrustify" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml"\n'}
+[1.124101] (cpp_pubsub) StdoutLine: {'line': b'6: Test timeout computed to be: 60\n'}
+[1.168572] (cpp_pubsub) StdoutLine: {'line': b"6: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':\n"}
+[1.168713] (cpp_pubsub) StdoutLine: {'line': b'6:  - /opt/ros/foxy/bin/ament_uncrustify --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml\n'}
+[1.200993] (-) TimerEvent: {}
+[1.301221] (-) TimerEvent: {}
+[1.356056] (cpp_pubsub) StdoutLine: {'line': b'6: /opt/ros/foxy/bin/ament_uncrustify:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n'}
+[1.356179] (cpp_pubsub) StdoutLine: {'line': b'6:   from pkg_resources import load_entry_point\n'}
+[1.356237] (cpp_pubsub) StdoutLine: {'line': b"6: Code style divergence in file 'test/test_my_node.cpp':\n"}
+[1.356291] (cpp_pubsub) StdoutLine: {'line': b'6: \n'}
+[1.356348] (cpp_pubsub) StdoutLine: {'line': b'6: --- test/test_my_node.cpp\n'}
+[1.356398] (cpp_pubsub) StdoutLine: {'line': b'6: +++ test/test_my_node.cpp.uncrustify\n'}
+[1.356449] (cpp_pubsub) StdoutLine: {'line': b'6: @@ -7 +6,0 @@\n'}
+[1.356498] (cpp_pubsub) StdoutLine: {'line': b'6: -\n'}
+[1.356547] (cpp_pubsub) StdoutLine: {'line': b'6: \n'}
+[1.356596] (cpp_pubsub) StdoutLine: {'line': b'6: 1 files with code style divergence\n'}
+[1.356646] (cpp_pubsub) StdoutLine: {'line': b"6: No code style divergence in file 'src/publisher_member_function.cpp'\n"}
+[1.356695] (cpp_pubsub) StdoutLine: {'line': b'6: \n'}
+[1.356743] (cpp_pubsub) StdoutLine: {'line': b"6: No code style divergence in file 'src/subscriber_member_function.cpp'\n"}
+[1.356792] (cpp_pubsub) StdoutLine: {'line': b'6: \n'}
+[1.367398] (cpp_pubsub) StdoutLine: {'line': b'6: -- run_test.py: return code 1\n'}
+[1.367599] (cpp_pubsub) StdoutLine: {'line': b"6: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml'\n"}
+[1.374518] (cpp_pubsub) StdoutLine: {'line': b'6/7 Test #6: uncrustify .......................***Failed    0.25 sec\n'}
+[1.374711] (cpp_pubsub) StdoutLine: {'line': b'test 7\n'}
+[1.374769] (cpp_pubsub) StdoutLine: {'line': b'    Start 7: xmllint\n'}
+[1.374821] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[1.374904] (cpp_pubsub) StdoutLine: {'line': b'7: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_xmllint/xmllint.txt" "--command" "/opt/ros/foxy/bin/ament_xmllint" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml"\n'}
+[1.374958] (cpp_pubsub) StdoutLine: {'line': b'7: Test timeout computed to be: 60\n'}
+[1.401323] (-) TimerEvent: {}
+[1.418362] (cpp_pubsub) StdoutLine: {'line': b"7: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':\n"}
+[1.418525] (cpp_pubsub) StdoutLine: {'line': b'7:  - /opt/ros/foxy/bin/ament_xmllint --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml\n'}
+[1.501439] (-) TimerEvent: {}
+[1.601661] (-) TimerEvent: {}
+[1.702001] (-) TimerEvent: {}
+[1.802434] (-) TimerEvent: {}
+[1.903128] (-) TimerEvent: {}
+[1.953715] (cpp_pubsub) StdoutLine: {'line': b'7: /opt/ros/foxy/bin/ament_xmllint:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n'}
+[1.954205] (cpp_pubsub) StdoutLine: {'line': b'7:   from pkg_resources import load_entry_point\n'}
+[1.954557] (cpp_pubsub) StdoutLine: {'line': b"7: File 'package.xml' is valid\n"}
+[1.954864] (cpp_pubsub) StdoutLine: {'line': b'7: \n'}
+[1.955136] (cpp_pubsub) StdoutLine: {'line': b'7: No problems found\n'}
+[1.967486] (cpp_pubsub) StdoutLine: {'line': b'7: -- run_test.py: return code 0\n'}
+[1.967700] (cpp_pubsub) StdoutLine: {'line': b"7: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml'\n"}
+[1.974298] (cpp_pubsub) StdoutLine: {'line': b'7/7 Test #7: xmllint ..........................   Passed    0.60 sec\n'}
+[1.974661] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[1.974758] (cpp_pubsub) StdoutLine: {'line': b'43% tests passed\x1b[0;0m, \x1b[0;31m4 tests failed\x1b[0;0m out of 7\n'}
+[1.974815] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[1.974867] (cpp_pubsub) StdoutLine: {'line': b'Label Time Summary:\n'}
+[1.974918] (cpp_pubsub) StdoutLine: {'line': b'copyright     =   0.26 sec*proc (1 test)\n'}
+[1.974968] (cpp_pubsub) StdoutLine: {'line': b'cppcheck      =   0.26 sec*proc (1 test)\n'}
+[1.975017] (cpp_pubsub) StdoutLine: {'line': b'cpplint       =   0.27 sec*proc (1 test)\n'}
+[1.975065] (cpp_pubsub) StdoutLine: {'line': b'gtest         =   0.05 sec*proc (1 test)\n'}
+[1.975113] (cpp_pubsub) StdoutLine: {'line': b'lint_cmake    =   0.24 sec*proc (1 test)\n'}
+[1.975167] (cpp_pubsub) StdoutLine: {'line': b'linter        =   1.89 sec*proc (6 tests)\n'}
+[1.975214] (cpp_pubsub) StdoutLine: {'line': b'uncrustify    =   0.25 sec*proc (1 test)\n'}
+[1.975262] (cpp_pubsub) StdoutLine: {'line': b'xmllint       =   0.60 sec*proc (1 test)\n'}
+[1.975309] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[1.975357] (cpp_pubsub) StdoutLine: {'line': b'Total Test time (real) =   1.94 sec\n'}
+[1.975405] (cpp_pubsub) StdoutLine: {'line': b'\n'}
+[1.975453] (cpp_pubsub) StdoutLine: {'line': b'The following tests FAILED:\n'}
+[1.975501] (cpp_pubsub) StdoutLine: {'line': b'\t\x1b[0;31m  2 - copyright (Failed)\x1b[0;0m\n'}
+[1.975549] (cpp_pubsub) StdoutLine: {'line': b'\t\x1b[0;31m  4 - cpplint (Failed)\x1b[0;0m\n'}
+[1.975596] (cpp_pubsub) StdoutLine: {'line': b'\t\x1b[0;31m  5 - lint_cmake (Failed)\x1b[0;0m\n'}
+[1.975643] (cpp_pubsub) StdoutLine: {'line': b'\t\x1b[0;31m  6 - uncrustify (Failed)\x1b[0;0m\n'}
+[1.996753] (cpp_pubsub) StderrLine: {'line': b'Errors while running CTest\n'}
+[1.998778] (cpp_pubsub) CommandEnded: {'returncode': 8}
+[1.999332] (cpp_pubsub) TestFailure: {'identifier': 'cpp_pubsub'}
+[1.999372] (cpp_pubsub) JobEnded: {'identifier': 'cpp_pubsub', 'rc': 0}
+[1.999962] (-) EventReactorShutdown: {}

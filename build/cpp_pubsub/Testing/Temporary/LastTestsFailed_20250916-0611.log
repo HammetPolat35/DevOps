@@ -1,0 +1,4 @@
+2:copyright
+4:cpplint
+5:lint_cmake
+6:uncrustify

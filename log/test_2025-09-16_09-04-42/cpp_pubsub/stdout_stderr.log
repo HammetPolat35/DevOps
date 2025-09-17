@@ -1,0 +1,167 @@
+UpdateCTestConfiguration  from :/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini
+Parse Config file:/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini
+   Site: bmcotonom1-GE75-Raider-9SF
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+SetCTestConfiguration:CMakeCommand:/usr/bin/cmake
+Create new tag: 20250916-0604 - Experimental
+UpdateCTestConfiguration  from :/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini
+Parse Config file:/home/bmcotonom1/DevOps/build/cpp_pubsub/CTestConfiguration.ini
+Test project /home/bmcotonom1/DevOps/build/cpp_pubsub
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: test_my_node
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_cmake_gtest/test_my_node.txt" "--command" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_my_node" "--gtest_output=xml:/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml"
+1: Test timeout computed to be: 60
+1: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/build/cpp_pubsub':
+1:  - /home/bmcotonom1/DevOps/build/cpp_pubsub/test_my_node --gtest_output=xml:/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml
+1: Running main() from /opt/ros/foxy/src/gtest_vendor/src/gtest_main.cc
+1: [==========] Running 1 test from 1 test case.
+1: [----------] Global test environment set-up.
+1: [----------] 1 test from SanityCheck
+1: [ RUN      ] SanityCheck.BasicAssertion
+1: [       OK ] SanityCheck.BasicAssertion (0 ms)
+1: [----------] 1 test from SanityCheck (0 ms total)
+1: 
+1: [----------] Global test environment tear-down
+1: [==========] 1 test from 1 test case ran. (0 ms total)
+1: [  PASSED  ] 1 test.
+1: -- run_test.py: return code 0
+1: -- run_test.py: inject classname prefix into gtest result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml'
+1: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/test_my_node.gtest.xml'
+1/7 Test #1: test_my_node .....................   Passed    0.05 sec
+test 2
+    Start 2: copyright
+
+2: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_copyright/copyright.txt" "--command" "/opt/ros/foxy/bin/ament_copyright" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml"
+2: Test timeout computed to be: 60
+2: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':
+2:  - /opt/ros/foxy/bin/ament_copyright --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml
+2: /opt/ros/foxy/bin/ament_copyright:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+2:   from pkg_resources import load_entry_point
+2: test/test_my_node.cpp: could not find copyright notice
+2: 1 errors, checked 3 files
+2: -- run_test.py: return code 1
+2: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/copyright.xunit.xml'
+2/7 Test #2: copyright ........................***Failed    0.27 sec
+test 3
+    Start 3: cppcheck
+
+3: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/foxy/bin/ament_cppcheck" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml"
+3: Test timeout computed to be: 300
+3: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':
+3:  - /opt/ros/foxy/bin/ament_cppcheck --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml
+3: /opt/ros/foxy/bin/ament_cppcheck:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+3:   from pkg_resources import load_entry_point
+3: No problems found
+3: -- run_test.py: return code 0
+3: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cppcheck.xunit.xml'
+3/7 Test #3: cppcheck .........................   Passed    0.26 sec
+test 4
+    Start 4: cpplint
+
+4: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_cpplint/cpplint.txt" "--command" "/opt/ros/foxy/bin/ament_cpplint" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml"
+4: Test timeout computed to be: 120
+4: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':
+4:  - /opt/ros/foxy/bin/ament_cpplint --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml
+4: /opt/ros/foxy/bin/ament_cpplint:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+4:   from pkg_resources import load_entry_point
+4: /home/bmcotonom1/DevOps/src/cpp_pubsub/test/test_my_node.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
+4: Category 'legal/copyright' errors found: 1
+4: Total errors found: 1
+4: Using '--root=/home/bmcotonom1/DevOps/src/cpp_pubsub/src' argument
+4: 
+4: Done processing /home/bmcotonom1/DevOps/src/cpp_pubsub/src/publisher_member_function.cpp
+4: 
+4: Done processing /home/bmcotonom1/DevOps/src/cpp_pubsub/src/subscriber_member_function.cpp
+4: 
+4: Using '--root=/home/bmcotonom1/DevOps/src/cpp_pubsub/test' argument
+4: 
+4: Done processing /home/bmcotonom1/DevOps/src/cpp_pubsub/test/test_my_node.cpp
+4: 
+4: -- run_test.py: return code 1
+4: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml'
+4/7 Test #4: cpplint ..........................***Failed    0.28 sec
+test 5
+    Start 5: lint_cmake
+
+5: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/foxy/bin/ament_lint_cmake" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml"
+5: Test timeout computed to be: 60
+5: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':
+5:  - /opt/ros/foxy/bin/ament_lint_cmake --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml
+5: /opt/ros/foxy/bin/ament_lint_cmake:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+5:   from pkg_resources import load_entry_point
+5: CMakeLists.txt:31: Line ends in whitespace [whitespace/eol]
+5: CMakeLists.txt:41: Line ends in whitespace [whitespace/eol]
+5: 
+5: 
+5: 2 errors
+5: -- run_test.py: return code 1
+5: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/lint_cmake.xunit.xml'
+5/7 Test #5: lint_cmake .......................***Failed    0.24 sec
+test 6
+    Start 6: uncrustify
+
+6: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/foxy/bin/ament_uncrustify" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml"
+6: Test timeout computed to be: 60
+6: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':
+6:  - /opt/ros/foxy/bin/ament_uncrustify --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml
+6: /opt/ros/foxy/bin/ament_uncrustify:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+6:   from pkg_resources import load_entry_point
+6: Code style divergence in file 'test/test_my_node.cpp':
+6: 
+6: --- test/test_my_node.cpp
+6: +++ test/test_my_node.cpp.uncrustify
+6: @@ -7 +6,0 @@
+6: -
+6: 
+6: 1 files with code style divergence
+6: No code style divergence in file 'src/publisher_member_function.cpp'
+6: 
+6: No code style divergence in file 'src/subscriber_member_function.cpp'
+6: 
+6: -- run_test.py: return code 1
+6: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml'
+6/7 Test #6: uncrustify .......................***Failed    0.25 sec
+test 7
+    Start 7: xmllint
+
+7: Test command: /usr/bin/python3 "-u" "/opt/ros/foxy/share/ament_cmake_test/cmake/run_test.py" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml" "--package-name" "cpp_pubsub" "--output-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/ament_xmllint/xmllint.txt" "--command" "/opt/ros/foxy/bin/ament_xmllint" "--xunit-file" "/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml"
+7: Test timeout computed to be: 60
+7: -- run_test.py: invoking following command in '/home/bmcotonom1/DevOps/src/cpp_pubsub':
+7:  - /opt/ros/foxy/bin/ament_xmllint --xunit-file /home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml
+7: /opt/ros/foxy/bin/ament_xmllint:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+7:   from pkg_resources import load_entry_point
+7: File 'package.xml' is valid
+7: 
+7: No problems found
+7: -- run_test.py: return code 0
+7: -- run_test.py: verify result file '/home/bmcotonom1/DevOps/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml'
+7/7 Test #7: xmllint ..........................   Passed    1.09 sec
+
+43% tests passed[0;0m, [0;31m4 tests failed[0;0m out of 7
+
+Label Time Summary:
+copyright     =   0.27 sec*proc (1 test)
+cppcheck      =   0.26 sec*proc (1 test)
+cpplint       =   0.28 sec*proc (1 test)
+gtest         =   0.05 sec*proc (1 test)
+lint_cmake    =   0.24 sec*proc (1 test)
+linter        =   2.38 sec*proc (6 tests)
+uncrustify    =   0.25 sec*proc (1 test)
+xmllint       =   1.09 sec*proc (1 test)
+
+Total Test time (real) =   2.44 sec
+
+The following tests FAILED:
+	[0;31m  2 - copyright (Failed)[0;0m
+	[0;31m  4 - cpplint (Failed)[0;0m
+	[0;31m  5 - lint_cmake (Failed)[0;0m
+	[0;31m  6 - uncrustify (Failed)[0;0m
+Errors while running CTest

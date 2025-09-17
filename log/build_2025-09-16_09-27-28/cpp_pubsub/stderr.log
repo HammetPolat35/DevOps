@@ -1,0 +1,10 @@
+CMake Error at CMakeLists.txt:8 (target_compile_options):
+  Cannot specify compile options for target "talker" which is not built by
+  this project.
+
+
+CMake Error at CMakeLists.txt:9 (target_link_libraries):
+  Cannot specify link libraries for target "talker" which is not built by
+  this project.
+
+

@@ -1,0 +1,22 @@
+-- run_test.py: invoking following command in '/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub':
+ - /opt/ros/foxy/bin/ament_cpplint --xunit-file /home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml
+
+/opt/ros/foxy/bin/ament_cpplint:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import load_entry_point
+/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub/test/test_my_node.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
+Category 'legal/copyright' errors found: 1
+Total errors found: 1
+Using '--root=/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub/src' argument
+
+Done processing /home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub/src/publisher_member_function.cpp
+
+Done processing /home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub/src/subscriber_member_function.cpp
+
+Using '--root=/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub/test' argument
+
+Done processing /home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub/test/test_my_node.cpp
+
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub/test_results/cpp_pubsub/cpplint.xunit.xml'

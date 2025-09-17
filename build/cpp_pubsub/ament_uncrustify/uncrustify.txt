@@ -1,0 +1,21 @@
+-- run_test.py: invoking following command in '/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub':
+ - /opt/ros/foxy/bin/ament_uncrustify --xunit-file /home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml
+
+/opt/ros/foxy/bin/ament_uncrustify:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import load_entry_point
+Code style divergence in file 'test/test_my_node.cpp':
+
+--- test/test_my_node.cpp
++++ test/test_my_node.cpp.uncrustify
+@@ -7 +6,0 @@
+-
+
+1 files with code style divergence
+No code style divergence in file 'src/publisher_member_function.cpp'
+
+No code style divergence in file 'src/subscriber_member_function.cpp'
+
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub/test_results/cpp_pubsub/uncrustify.xunit.xml'

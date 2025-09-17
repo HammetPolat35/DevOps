@@ -1,0 +1,2 @@
+Invoking command in '/home/bmcotonom1/DevOps (copy)/build/cpp_pubsub': /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+Invoked command in '/home/bmcotonom1/DevOps (copy)/build/cpp_pubsub' returned '8': /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

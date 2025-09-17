@@ -1,0 +1,2 @@
+Invoking command in '/home/bmcotonom1/DevOps/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/bmcotonom1/DevOps/src/cpp_pubsub -DENABLE_COVERAGE=ON -DCMAKE_INSTALL_PREFIX=/home/bmcotonom1/DevOps/install/cpp_pubsub
+Invoked command in '/home/bmcotonom1/DevOps/build/cpp_pubsub' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/bmcotonom1/DevOps/src/cpp_pubsub -DENABLE_COVERAGE=ON -DCMAKE_INSTALL_PREFIX=/home/bmcotonom1/DevOps/install/cpp_pubsub

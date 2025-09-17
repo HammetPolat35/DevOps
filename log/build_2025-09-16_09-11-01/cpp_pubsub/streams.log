@@ -1,0 +1,30 @@
+[0.011s] Invoking command in '/home/bmcotonom1/DevOps/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/bmcotonom1/DevOps/src/cpp_pubsub -DENABLE_COVERAGE=ON -DCMAKE_INSTALL_PREFIX=/home/bmcotonom1/DevOps/install/cpp_pubsub
+[0.056s] -- The C compiler identification is GNU 9.4.0
+[0.100s] -- The CXX compiler identification is GNU 9.4.0
+[0.103s] -- Check for working C compiler: /usr/bin/cc
+[0.165s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.166s] -- Detecting C compiler ABI info
+[0.229s] -- Detecting C compiler ABI info - done
+[0.241s] -- Detecting C compile features
+[0.242s] -- Detecting C compile features - done
+[0.244s] -- Check for working CXX compiler: /usr/bin/c++
+[0.330s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.331s] -- Detecting CXX compiler ABI info
+[0.420s] -- Detecting CXX compiler ABI info - done
+[0.432s] -- Detecting CXX compile features
+[0.433s] -- Detecting CXX compile features - done
+[0.434s] -- Building with code coverage enabled
+[0.434s] CMake Error at CMakeLists.txt:7 (target_compile_options):
+[0.434s]   Cannot specify compile options for target "your_library_or_executable"
+[0.434s]   which is not built by this project.
+[0.434s] 
+[0.434s] 
+[0.434s] CMake Error at CMakeLists.txt:8 (target_link_libraries):
+[0.434s]   Cannot specify link libraries for target "your_library_or_executable" which
+[0.434s]   is not built by this project.
+[0.434s] 
+[0.435s] 
+[0.435s] -- Configuring incomplete, errors occurred!
+[0.435s] See also "/home/bmcotonom1/DevOps/build/cpp_pubsub/CMakeFiles/CMakeOutput.log".
+[0.435s] See also "/home/bmcotonom1/DevOps/build/cpp_pubsub/CMakeFiles/CMakeError.log".
+[0.437s] Invoked command in '/home/bmcotonom1/DevOps/build/cpp_pubsub' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/bmcotonom1/DevOps/src/cpp_pubsub -DENABLE_COVERAGE=ON -DCMAKE_INSTALL_PREFIX=/home/bmcotonom1/DevOps/install/cpp_pubsub

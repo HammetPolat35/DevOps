@@ -1,0 +1,32 @@
+colcon build --packages-select cpp_pubsub
+--new ter
+. install/setup.bash
+ros2 run cpp_pubsub talker
+--new ter
+. install/setup.bash
+ros2 run cpp_pubsub listener
+
+
+-------------------------------------------
+
+
+cppcheck --enable=all --inconclusive --std=c++14 --language=c++ src/
+
+colcon build --packages-select cpp_pubsub --cmake-clean-cache --cmake-args -DENABLE_COVERAGE=ON
+
+---new ter
+source install/setup.bash
+GTEST_OUTPUT="xml:test_results" colcon test --packages-select cpp_pubsub
+/
+/
+colcon test --packages-select cpp_pubsub --event-handlers console_direct+
+
+
+//colcon test-result --all
+//colcon test-result --verbose
+
+
+lcov --capture --directory build/cpp_pubsub --output-file coverage.info
+lcov --remove coverage.info '/usr/*' '*/test/*' --output-file coverage_filtered.info
+genhtml coverage_filtered.info --output-directory coverage_report
+xdg-open coverage_report/index.html

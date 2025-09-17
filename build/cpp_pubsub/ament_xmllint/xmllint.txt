@@ -1,0 +1,12 @@
+-- run_test.py: invoking following command in '/home/bmcotonom1/DevOps (second copy )/src/cpp_pubsub':
+ - /opt/ros/foxy/bin/ament_xmllint --xunit-file /home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml
+
+/opt/ros/foxy/bin/ament_xmllint:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import load_entry_point
+File 'package.xml' is valid
+
+No problems found
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/bmcotonom1/DevOps (second copy )/build/cpp_pubsub/test_results/cpp_pubsub/xmllint.xunit.xml'

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="cpp_pubsub.cppcheck"
+  tests="3"
+  errors="0"
+  failures="0"
+  time="0.010"
+  skipped="0"
+>
+  <testcase
+    name="src/publisher_member_function.cpp"
+    classname="cpp_pubsub.cppcheck"/>
+  <testcase
+    name="src/subscriber_member_function.cpp"
+    classname="cpp_pubsub.cppcheck"/>
+  <testcase
+    name="test/test_my_node.cpp"
+    classname="cpp_pubsub.cppcheck"/>
+  <system-out>Checked files:
+* src/publisher_member_function.cpp
+* src/subscriber_member_function.cpp
+* test/test_my_node.cpp</system-out>
+</testsuite>
