@@ -23,10 +23,10 @@ jobs:
         name: test-results
         path: test_results/
 
-    - name: ⚙️ Set up ROS 2 Foxy
+    - name: ⚙️ Set up ROS 2 humble
       uses: ros-tooling/setup-ros@v0.6
       with:
-        required-ros-distributions: foxy
+        required-ros-distributions: humble
 
     - name: 🧪 Install dependencies
       run: |
