@@ -1,0 +1,82 @@
+name: ROS2 Foxy CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-20.04  # ROS 2 Foxy officially supported on 20.04
+
+    env:
+      COLCON_DEFAULTS_FILE: colcon.defaults.yaml
+
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+
+    - name: ⚙️ Set up ROS 2 Foxy
+      uses: ros-tooling/setup-ros@v0.6
+      with:
+        distribution: foxy
+
+    - name: 🧪 Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y \
+          python3-colcon-common-extensions \
+          lcov \
+          cppcheck \
+          gcovr \
+          python3-pip \
+          python3-pytest \
+          python3-pytest-cov
+        pip3 install pytest pytest-cov
+
+    - name: 🧹 Clean old build
+      run: rm -rf build/ install/ log/
+
+    - name: 🔍 Run cppcheck
+      run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ src/
+
+    - name: 🛠️ Build with coverage flags
+      run: |
+        colcon build --packages-select cpp_pubsub \
+          --cmake-clean-cache \
+          --cmake-args -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug
+
+    - name: 🔁 Source the workspace
+      run: source install/setup.bash
+
+    - name: ✅ Run unit tests
+      run: |
+        source install/setup.bash
+        GTEST_OUTPUT="xml:test_results" colcon test --packages-select cpp_pubsub
+        colcon test-result --verbose
+
+    - name: 📈 Generate coverage info
+      run: |
+        lcov --capture --directory build/cpp_pubsub --output-file coverage.info
+        lcov --remove coverage.info '/usr/*' '*/test/*' --output-file coverage_filtered.info
+        genhtml coverage_filtered.info --output-directory coverage_report
+
+    - name: ⛔ Fail if coverage < 10%
+      run: |
+        line_cov=$(lcov --summary coverage_filtered.info | grep "lines" | awk '{print $2}' | tr -d '%')
+        echo "Line coverage: $line_cov%"
+        cov_int=${line_cov%.*}
+        if [ "$cov_int" -lt 10 ]; then
+          echo "❌ Coverage ($cov_int%) is below threshold (10%)"
+          exit 1
+        else
+          echo "✅ Coverage check passed"
+        fi
+
+    - name: 📤 Upload coverage report as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage_report
+
