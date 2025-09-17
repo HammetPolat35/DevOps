@@ -24,7 +24,7 @@ jobs:
         path: test_results/
 
     - name: ⚙️ Set up ROS 2 humble
-      uses: ros-tooling/setup-ros@v0.6
+      uses: ros-tooling/setup-ros@v0.22
       with:
         required-ros-distributions: humble
 
