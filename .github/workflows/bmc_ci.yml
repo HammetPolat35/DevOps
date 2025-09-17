@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-20.04  # ROS 2 Foxy officially supported on 20.04
+    runs-on: ubuntu-latest
 
     env:
       COLCON_DEFAULTS_FILE: colcon.defaults.yaml
