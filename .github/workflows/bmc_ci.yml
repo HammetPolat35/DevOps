@@ -30,16 +30,26 @@ jobs:
 
     - name: 🧪 Install dependencies
       run: |
-        set -e  # Stop script on first error
+        set -ex  # Echo commands and exit on error
+
+        echo "🔄 Running apt update..."
         sudo apt update -y
-        sudo apt install -y\
+
+        echo "📦 Installing required packages..."
+        sudo apt install -y \
           python3-colcon-common-extensions \
           lcov \
           cppcheck \
           gcovr \
           python3-pip
+
+        echo "🐍 Upgrading pip..."
         pip3 install --upgrade pip
+
+        echo "🐍 Installing pytest and pytest-cov..."
         pip3 install pytest pytest-cov
+
+        echo "✅ Dependencies installed successfully!"
 
     - name: 🧹 Clean old build
       run: rm -rf build/ install/ log/
