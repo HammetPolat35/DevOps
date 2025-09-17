@@ -26,24 +26,18 @@ jobs:
     - name: ⚙️ Set up ROS 2 Foxy
       uses: ros-tooling/setup-ros@v0.6
       with:
-        distribution: foxy
+        required-ros-distributions: foxy
 
     - name: 🧪 Install dependencies
       run: |
         set -e  # Stop script on first error
-
-        echo "🔄 Updating APT..."
         sudo apt update -y
-
-        echo "📦 Installing packages..."
-        sudo apt install -y \
+        sudo apt install -y\
           python3-colcon-common-extensions \
           lcov \
           cppcheck \
           gcovr \
           python3-pip
-
-        echo "🐍 Installing Python packages..."
         pip3 install --upgrade pip
         pip3 install pytest pytest-cov
 
