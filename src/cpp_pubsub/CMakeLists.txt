@@ -24,11 +24,19 @@ ament_target_dependencies(listener rclcpp std_msgs)
 
 # Now apply coverage flags AFTER targets exist
 if(ENABLE_COVERAGE)
-  target_compile_options(talker PUBLIC --coverage -O0 -g)
-  target_link_libraries(talker gcov)
+  if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    message(STATUS "Coverage flags enabled for talker and listener")
 
-  target_compile_options(listener PUBLIC --coverage -O0 -g)
-  target_link_libraries(listener gcov)
+    # Compile options
+    target_compile_options(talker PUBLIC -O0 -g --coverage)
+    target_compile_options(listener PUBLIC -O0 -g --coverage)
+
+    # Linker flags
+    target_link_libraries(talker gcov)
+    target_link_libraries(listener gcov)
+  else()
+    message(WARNING "Coverage is only supported with GCC or Clang")
+  endif()
 endif()
 
 install(TARGETS
