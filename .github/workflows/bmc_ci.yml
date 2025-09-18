@@ -19,11 +19,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      with: 
-        name: test-results
-        path: test_results/
 
     - name: Set up ROS 2 humble
       uses: ros-tooling/setup-ros@main
@@ -69,6 +64,13 @@ jobs:
         source install/setup.bash
         GTEST_OUTPUT="xml:test_results" colcon test --packages-select cpp_pubsub
         colcon test-result --verbose
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with: 
+        name: test-results
+        path: test_results/
+        
         
     - name: Run nodes to generate coverage
       run: |
