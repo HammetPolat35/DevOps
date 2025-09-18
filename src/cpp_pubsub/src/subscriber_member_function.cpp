@@ -18,6 +18,8 @@
 #include "std_msgs/msg/string.hpp"
 using std::placeholders::_1;
 
+int unused_var = 42;
+
 class MinimalSubscriber : public rclcpp::Node
 {
 public:
