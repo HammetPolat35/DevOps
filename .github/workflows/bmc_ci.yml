@@ -76,6 +76,12 @@ jobs:
         source install/setup.bash
         GTEST_OUTPUT="xml:test_results" colcon test --packages-select cpp_pubsub
         colcon test-result --verbose
+        
+    - name: Run nodes to generate coverage
+      run: |
+        source install/setup.bash
+        timeout 5s ros2 run cpp_pubsub talker &
+        timeout 5s ros2 run cpp_pubsub listener || true
 
     - name: 📈 Generate coverage info
       run: |
