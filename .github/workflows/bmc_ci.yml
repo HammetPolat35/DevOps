@@ -3,8 +3,10 @@ name: ROS2 Foxy CI
 on:
   push:
     branches:
-      - main
+      - '**'
   pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -108,4 +110,3 @@ jobs:
       with:
         name: coverage-report
         path: coverage_report
-
