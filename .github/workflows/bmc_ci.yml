@@ -114,6 +114,7 @@ jobs:
         name: coverage-report
         path: coverage_report
 
+
   docker-build:
     name: Docker Build Test
     runs-on: ubuntu-22.04
@@ -123,3 +124,4 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t ros2_package_build .
+
