@@ -1,4 +1,4 @@
-name: ROS2 Foxy CI
+name: ROS2 Humble CI
 
 on:
   push:
@@ -29,40 +29,30 @@ jobs:
       uses: ros-tooling/setup-ros@main
       with:
         required-ros-distributions: humble
-    - name: install ros2 packages
+
+    - name: Install ros2 packages
       run: |
         sudo apt update
         sudo apt install -y ros-humble-ros-base
 
     - name: Install dependencies
       run: |
-        set -ex  # Echo commands and exit on error
-
-        echo "Running apt update..."
+        set -ex
         sudo apt update -y
-
-        echo "Installing required packages..."
         sudo apt install -y \
           python3-colcon-common-extensions \
           lcov \
           cppcheck \
           gcovr \
           python3-pip
-
-        echo "Upgrading pip..."
         pip3 install --upgrade pip
-
-        echo "Installing pytest and pytest-cov..."
         pip3 install pytest pytest-cov
-
-        echo "Dependencies installed successfully!"
 
     - name: Clean old build
       run: rm -rf build/ install/ log/
 
     - name: Run cppcheck
       run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ --suppress=missingIncludeSystem src/
-
 
     - name: Build with coverage flags
       run: |
@@ -99,7 +89,7 @@ jobs:
         echo "Line coverage: $line_cov%"
         cov_int=${line_cov%.*}
         if [ $cov_int -lt 20 ]; then
-          echo "Coverage ($cov_int%) is below threshold (10%)"
+          echo "Coverage ($cov_int%) is below threshold (20%)"
           exit 1
         else
           echo "Coverage check passed"
@@ -111,3 +101,12 @@ jobs:
         name: coverage-report
         path: coverage_report
 
+  docker-build:
+    name: Docker Build Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t ros2_package_build .
