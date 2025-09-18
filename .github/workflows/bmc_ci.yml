@@ -79,6 +79,7 @@ jobs:
 
     - name: 📈 Generate coverage info
       run: |
+        source install/setup.bash
         lcov --capture --directory build/cpp_pubsub --output-file coverage.info
         lcov --remove coverage.info '/usr/*' '*/test/*' --output-file coverage_filtered.info
         genhtml coverage_filtered.info --output-directory coverage_report
