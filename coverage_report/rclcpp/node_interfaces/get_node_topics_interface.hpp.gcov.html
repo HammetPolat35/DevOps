@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntryMed">83.3 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -112,12 +112,12 @@
 <a name="50"><span class="lineNum">      50 </span>            :   &gt;::value, int&gt;::type = 0</a>
 <a name="51"><span class="lineNum">      51 </span>            : &gt;</a>
 <a name="52"><span class="lineNum">      52 </span>            : std::shared_ptr&lt;rclcpp::node_interfaces::NodeTopicsInterface&gt;</a>
-<a name="53"><span class="lineNum">      53 </span><span class="lineCov">          2 : get_node_topics_interface_from_pointer(NodeType node_pointer)</span></a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineNoCov">          0 : get_node_topics_interface_from_pointer(NodeType node_pointer)</span></a>
 <a name="54"><span class="lineNum">      54 </span>            : {</a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">          2 :   if (!node_pointer) {</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineNoCov">          0 :   if (!node_pointer) {</span></a>
 <a name="56"><span class="lineNum">      56 </span><span class="lineNoCov">          0 :     throw std::invalid_argument(&quot;node cannot be nullptr&quot;);</span></a>
 <a name="57"><span class="lineNum">      57 </span>            :   }</a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">          2 :   return node_pointer-&gt;get_node_topics_interface();</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineNoCov">          0 :   return node_pointer-&gt;get_node_topics_interface();</span></a>
 <a name="59"><span class="lineNum">      59 </span>            : }</a>
 <a name="60"><span class="lineNum">      60 </span>            : </a>
 <a name="61"><span class="lineNum">      61 </span>            : }  // namespace detail</a>
@@ -146,10 +146,10 @@
 <a name="84"><span class="lineNum">      84 </span>            : &gt;</a>
 <a name="85"><span class="lineNum">      85 </span>            : inline</a>
 <a name="86"><span class="lineNum">      86 </span>            : std::shared_ptr&lt;rclcpp::node_interfaces::NodeTopicsInterface&gt;</a>
-<a name="87"><span class="lineNum">      87 </span><span class="lineCov">          2 : get_node_topics_interface(NodeType &amp;&amp; node)</span></a>
+<a name="87"><span class="lineNum">      87 </span><span class="lineNoCov">          0 : get_node_topics_interface(NodeType &amp;&amp; node)</span></a>
 <a name="88"><span class="lineNum">      88 </span>            : {</a>
 <a name="89"><span class="lineNum">      89 </span>            :   // Forward references to detail implementation as a pointer.</a>
-<a name="90"><span class="lineNum">      90 </span><span class="lineCov">          2 :   return detail::get_node_topics_interface_from_pointer(&amp;node);</span></a>
+<a name="90"><span class="lineNum">      90 </span><span class="lineNoCov">          0 :   return detail::get_node_topics_interface_from_pointer(&amp;node);</span></a>
 <a name="91"><span class="lineNum">      91 </span>            : }</a>
 <a name="92"><span class="lineNum">      92 </span>            : </a>
 <a name="93"><span class="lineNum">      93 </span>            : /// Keep the NodeTopicsInterface a shared pointer.</a>

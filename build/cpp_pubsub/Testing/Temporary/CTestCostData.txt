@@ -1,11 +1,8 @@
-test_my_node 23 0.00237708
+test_my_node 55 0.0010407
 copyright 0 0
-cppcheck 23 0.0123481
+cppcheck 45 0.00655846
 cpplint 0 0
-lint_cmake 16 0.01641
+lint_cmake 38 0.00659848
 uncrustify 0 0
-xmllint 23 0.0390654
+xmllint 45 0.0181984
 ---
-copyright
-cpplint
-uncrustify

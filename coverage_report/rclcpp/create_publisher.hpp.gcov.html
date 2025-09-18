@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -102,7 +102,7 @@
 <a name="40"><span class="lineNum">      40 </span>            :   typename PublisherT = rclcpp::Publisher&lt;MessageT, AllocatorT&gt;,</a>
 <a name="41"><span class="lineNum">      41 </span>            :   typename NodeT&gt;</a>
 <a name="42"><span class="lineNum">      42 </span>            : std::shared_ptr&lt;PublisherT&gt;</a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineCov">          1 : create_publisher(</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineNoCov">          0 : create_publisher(</span></a>
 <a name="44"><span class="lineNum">      44 </span>            :   NodeT &amp; node,</a>
 <a name="45"><span class="lineNum">      45 </span>            :   const std::string &amp; topic_name,</a>
 <a name="46"><span class="lineNum">      46 </span>            :   const rclcpp::QoS &amp; qos,</a>
@@ -113,19 +113,19 @@
 <a name="51"><span class="lineNum">      51 </span>            : {</a>
 <a name="52"><span class="lineNum">      52 </span>            :   // Extract the NodeTopicsInterface from the NodeT.</a>
 <a name="53"><span class="lineNum">      53 </span>            :   using rclcpp::node_interfaces::get_node_topics_interface;</a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">          2 :   auto node_topics = get_node_topics_interface(node);</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineNoCov">          0 :   auto node_topics = get_node_topics_interface(node);</span></a>
 <a name="55"><span class="lineNum">      55 </span>            : </a>
 <a name="56"><span class="lineNum">      56 </span>            :   // Create the publisher.</a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">          2 :   auto pub = node_topics-&gt;create_publisher(</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineNoCov">          0 :   auto pub = node_topics-&gt;create_publisher(</span></a>
 <a name="58"><span class="lineNum">      58 </span>            :     topic_name,</a>
 <a name="59"><span class="lineNum">      59 </span>            :     rclcpp::create_publisher_factory&lt;MessageT, AllocatorT, PublisherT&gt;(options),</a>
 <a name="60"><span class="lineNum">      60 </span>            :     qos</a>
 <a name="61"><span class="lineNum">      61 </span>            :   );</a>
 <a name="62"><span class="lineNum">      62 </span>            : </a>
 <a name="63"><span class="lineNum">      63 </span>            :   // Add the publisher to the node topics interface.</a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">          1 :   node_topics-&gt;add_publisher(pub, options.callback_group);</span></a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineNoCov">          0 :   node_topics-&gt;add_publisher(pub, options.callback_group);</span></a>
 <a name="65"><span class="lineNum">      65 </span>            : </a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          2 :   return std::dynamic_pointer_cast&lt;PublisherT&gt;(pub);</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineNoCov">          0 :   return std::dynamic_pointer_cast&lt;PublisherT&gt;(pub);</span></a>
 <a name="67"><span class="lineNum">      67 </span>            : }</a>
 <a name="68"><span class="lineNum">      68 </span>            : </a>
 <a name="69"><span class="lineNum">      69 </span>            : }  // namespace rclcpp</a>

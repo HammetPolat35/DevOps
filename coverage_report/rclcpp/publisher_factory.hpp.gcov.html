@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">4</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -125,27 +125,27 @@
 <a name="63"><span class="lineNum">      63 </span>            : /// Return a PublisherFactory with functions setup for creating a PublisherT&lt;MessageT, AllocatorT&gt;.</a>
 <a name="64"><span class="lineNum">      64 </span>            : template&lt;typename MessageT, typename AllocatorT, typename PublisherT&gt;</a>
 <a name="65"><span class="lineNum">      65 </span>            : PublisherFactory</a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          1 : create_publisher_factory(const rclcpp::PublisherOptionsWithAllocator&lt;AllocatorT&gt; &amp; options)</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineNoCov">          0 : create_publisher_factory(const rclcpp::PublisherOptionsWithAllocator&lt;AllocatorT&gt; &amp; options)</span></a>
 <a name="67"><span class="lineNum">      67 </span>            : {</a>
-<a name="68"><span class="lineNum">      68 </span><span class="lineCov">          1 :   PublisherFactory factory {</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineNoCov">          0 :   PublisherFactory factory {</span></a>
 <a name="69"><span class="lineNum">      69 </span>            :     // factory function that creates a MessageT specific PublisherT</a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">          1 :     [options](</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineNoCov">          0 :     [options](</span></a>
 <a name="71"><span class="lineNum">      71 </span>            :       rclcpp::node_interfaces::NodeBaseInterface * node_base,</a>
 <a name="72"><span class="lineNum">      72 </span>            :       const std::string &amp; topic_name,</a>
 <a name="73"><span class="lineNum">      73 </span>            :       const rclcpp::QoS &amp; qos</a>
 <a name="74"><span class="lineNum">      74 </span>            :     ) -&gt; std::shared_ptr&lt;PublisherT&gt;</a>
 <a name="75"><span class="lineNum">      75 </span>            :     {</a>
-<a name="76"><span class="lineNum">      76 </span><span class="lineCov">          2 :       auto publisher = std::make_shared&lt;PublisherT&gt;(node_base, topic_name, qos, options);</span></a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineNoCov">          0 :       auto publisher = std::make_shared&lt;PublisherT&gt;(node_base, topic_name, qos, options);</span></a>
 <a name="77"><span class="lineNum">      77 </span>            :       // This is used for setting up things like intra process comms which</a>
 <a name="78"><span class="lineNum">      78 </span>            :       // require this-&gt;shared_from_this() which cannot be called from</a>
 <a name="79"><span class="lineNum">      79 </span>            :       // the constructor.</a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          1 :       publisher-&gt;post_init_setup(node_base, topic_name, qos, options);</span></a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">          2 :       return publisher;</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineNoCov">          0 :       publisher-&gt;post_init_setup(node_base, topic_name, qos, options);</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineNoCov">          0 :       return publisher;</span></a>
 <a name="82"><span class="lineNum">      82 </span>            :     }</a>
 <a name="83"><span class="lineNum">      83 </span>            :   };</a>
 <a name="84"><span class="lineNum">      84 </span>            : </a>
 <a name="85"><span class="lineNum">      85 </span>            :   // return the factory now that it is populated</a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          1 :   return factory;</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineNoCov">          0 :   return factory;</span></a>
 <a name="87"><span class="lineNum">      87 </span>            : }</a>
 <a name="88"><span class="lineNum">      88 </span>            : </a>
 <a name="89"><span class="lineNum">      89 </span>            : }  // namespace rclcpp</a>

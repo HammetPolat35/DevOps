@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">76</td>
-            <td class="headerCovTableEntryLo">25.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntryLo">62.5 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -122,16 +122,16 @@
 <a name="60"><span class="lineNum">      60 </span>            :   UniquePtrWithInfoCallback unique_ptr_with_info_callback_;</a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
 <a name="62"><span class="lineNum">      62 </span>            : public:</a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">          1 :   explicit AnySubscriptionCallback(std::shared_ptr&lt;Alloc&gt; allocator)</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineNoCov">          0 :   explicit AnySubscriptionCallback(std::shared_ptr&lt;Alloc&gt; allocator)</span></a>
 <a name="64"><span class="lineNum">      64 </span>            :   : shared_ptr_callback_(nullptr), shared_ptr_with_info_callback_(nullptr),</a>
 <a name="65"><span class="lineNum">      65 </span>            :     const_shared_ptr_callback_(nullptr), const_shared_ptr_with_info_callback_(nullptr),</a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          1 :     unique_ptr_callback_(nullptr), unique_ptr_with_info_callback_(nullptr)</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineNoCov">          0 :     unique_ptr_callback_(nullptr), unique_ptr_with_info_callback_(nullptr)</span></a>
 <a name="67"><span class="lineNum">      67 </span>            :   {</a>
-<a name="68"><span class="lineNum">      68 </span><span class="lineCov">          1 :     message_allocator_ = std::make_shared&lt;MessageAlloc&gt;(*allocator.get());</span></a>
-<a name="69"><span class="lineNum">      69 </span><span class="lineCov">          1 :     allocator::set_allocator_for_deleter(&amp;message_deleter_, message_allocator_.get());</span></a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">          1 :   }</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineNoCov">          0 :     message_allocator_ = std::make_shared&lt;MessageAlloc&gt;(*allocator.get());</span></a>
+<a name="69"><span class="lineNum">      69 </span><span class="lineNoCov">          0 :     allocator::set_allocator_for_deleter(&amp;message_deleter_, message_allocator_.get());</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineNoCov">          0 :   }</span></a>
 <a name="71"><span class="lineNum">      71 </span>            : </a>
-<a name="72"><span class="lineNum">      72 </span><span class="lineCov">          4 :   AnySubscriptionCallback(const AnySubscriptionCallback &amp;) = default;</span></a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineNoCov">          0 :   AnySubscriptionCallback(const AnySubscriptionCallback &amp;) = default;</span></a>
 <a name="73"><span class="lineNum">      73 </span>            : </a>
 <a name="74"><span class="lineNum">      74 </span>            :   template&lt;</a>
 <a name="75"><span class="lineNum">      75 </span>            :     typename CallbackT,</a>
@@ -142,10 +142,10 @@
 <a name="80"><span class="lineNum">      80 </span>            :       &gt;::value</a>
 <a name="81"><span class="lineNum">      81 </span>            :     &gt;::type * = nullptr</a>
 <a name="82"><span class="lineNum">      82 </span>            :   &gt;</a>
-<a name="83"><span class="lineNum">      83 </span><span class="lineCov">          1 :   void set(CallbackT callback)</span></a>
+<a name="83"><span class="lineNum">      83 </span><span class="lineNoCov">          0 :   void set(CallbackT callback)</span></a>
 <a name="84"><span class="lineNum">      84 </span>            :   {</a>
-<a name="85"><span class="lineNum">      85 </span><span class="lineCov">          1 :     shared_ptr_callback_ = callback;</span></a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          1 :   }</span></a>
+<a name="85"><span class="lineNum">      85 </span><span class="lineNoCov">          0 :     shared_ptr_callback_ = callback;</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineNoCov">          0 :   }</span></a>
 <a name="87"><span class="lineNum">      87 </span>            : </a>
 <a name="88"><span class="lineNum">      88 </span>            :   template&lt;</a>
 <a name="89"><span class="lineNum">      89 </span>            :     typename CallbackT,</a>
@@ -217,12 +217,12 @@
 <a name="155"><span class="lineNum">     155 </span>            :     unique_ptr_with_info_callback_ = callback;</a>
 <a name="156"><span class="lineNum">     156 </span>            :   }</a>
 <a name="157"><span class="lineNum">     157 </span>            : </a>
-<a name="158"><span class="lineNum">     158 </span><span class="lineCov">          9 :   void dispatch(</span></a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineNoCov">          0 :   void dispatch(</span></a>
 <a name="159"><span class="lineNum">     159 </span>            :     std::shared_ptr&lt;MessageT&gt; message, const rclcpp::MessageInfo &amp; message_info)</a>
 <a name="160"><span class="lineNum">     160 </span>            :   {</a>
-<a name="161"><span class="lineNum">     161 </span><span class="lineCov">          9 :     TRACEPOINT(callback_start, (const void *)this, false);</span></a>
-<a name="162"><span class="lineNum">     162 </span><span class="lineCov">          9 :     if (shared_ptr_callback_) {</span></a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineCov">          9 :       shared_ptr_callback_(message);</span></a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineNoCov">          0 :     TRACEPOINT(callback_start, (const void *)this, false);</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineNoCov">          0 :     if (shared_ptr_callback_) {</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 :       shared_ptr_callback_(message);</span></a>
 <a name="164"><span class="lineNum">     164 </span><span class="lineNoCov">          0 :     } else if (shared_ptr_with_info_callback_) {</span></a>
 <a name="165"><span class="lineNum">     165 </span><span class="lineNoCov">          0 :       shared_ptr_with_info_callback_(message, message_info);</span></a>
 <a name="166"><span class="lineNum">     166 </span><span class="lineNoCov">          0 :     } else if (const_shared_ptr_callback_) {</span></a>
@@ -240,8 +240,8 @@
 <a name="178"><span class="lineNum">     178 </span>            :     } else {</a>
 <a name="179"><span class="lineNum">     179 </span><span class="lineNoCov">          0 :       throw std::runtime_error(&quot;unexpected message without any callback set&quot;);</span></a>
 <a name="180"><span class="lineNum">     180 </span>            :     }</a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineCov">          9 :     TRACEPOINT(callback_end, (const void *)this);</span></a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineCov">          9 :   }</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineNoCov">          0 :     TRACEPOINT(callback_end, (const void *)this);</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineNoCov">          0 :   }</span></a>
 <a name="183"><span class="lineNum">     183 </span>            : </a>
 <a name="184"><span class="lineNum">     184 </span><span class="lineNoCov">          0 :   void dispatch_intra_process(</span></a>
 <a name="185"><span class="lineNum">     185 </span>            :     ConstMessageSharedPtr message, const rclcpp::MessageInfo &amp; message_info)</a>
@@ -295,11 +295,11 @@
 <a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :     return const_shared_ptr_callback_ || const_shared_ptr_with_info_callback_;</span></a>
 <a name="234"><span class="lineNum">     234 </span>            :   }</a>
 <a name="235"><span class="lineNum">     235 </span>            : </a>
-<a name="236"><span class="lineNum">     236 </span><span class="lineCov">          1 :   void register_callback_for_tracing()</span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineNoCov">          0 :   void register_callback_for_tracing()</span></a>
 <a name="237"><span class="lineNum">     237 </span>            :   {</a>
 <a name="238"><span class="lineNum">     238 </span>            : #ifndef TRACETOOLS_DISABLED</a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineCov">          1 :     if (shared_ptr_callback_) {</span></a>
-<a name="240"><span class="lineNum">     240 </span><span class="lineCov">          1 :       TRACEPOINT(</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineNoCov">          0 :     if (shared_ptr_callback_) {</span></a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineNoCov">          0 :       TRACEPOINT(</span></a>
 <a name="241"><span class="lineNum">     241 </span>            :         rclcpp_callback_register,</a>
 <a name="242"><span class="lineNum">     242 </span>            :         (const void *)this,</a>
 <a name="243"><span class="lineNum">     243 </span>            :         get_symbol(shared_ptr_callback_));</a>
@@ -330,7 +330,7 @@
 <a name="268"><span class="lineNum">     268 </span>            :         get_symbol(unique_ptr_with_info_callback_));</a>
 <a name="269"><span class="lineNum">     269 </span>            :     }</a>
 <a name="270"><span class="lineNum">     270 </span>            : #endif  // TRACETOOLS_DISABLED</a>
-<a name="271"><span class="lineNum">     271 </span><span class="lineCov">          1 :   }</span></a>
+<a name="271"><span class="lineNum">     271 </span><span class="lineNoCov">          0 :   }</span></a>
 <a name="272"><span class="lineNum">     272 </span>            : </a>
 <a name="273"><span class="lineNum">     273 </span>            : private:</a>
 <a name="274"><span class="lineNum">     274 </span>            :   std::shared_ptr&lt;MessageAlloc&gt; message_allocator_;</a>

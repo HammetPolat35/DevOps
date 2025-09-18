@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -139,11 +139,11 @@
 <a name="77"><span class="lineNum">      77 </span>            : }</a>
 <a name="78"><span class="lineNum">      78 </span>            : </a>
 <a name="79"><span class="lineNum">      79 </span>            : template&lt;typename T, typename U&gt;</a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          2 : void set_allocator_for_deleter(std::default_delete&lt;T&gt; * deleter, std::allocator&lt;U&gt; * alloc)</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineNoCov">          0 : void set_allocator_for_deleter(std::default_delete&lt;T&gt; * deleter, std::allocator&lt;U&gt; * alloc)</span></a>
 <a name="81"><span class="lineNum">      81 </span>            : {</a>
 <a name="82"><span class="lineNum">      82 </span>            :   (void) deleter;</a>
 <a name="83"><span class="lineNum">      83 </span>            :   (void) alloc;</a>
-<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          2 : }</span></a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="85"><span class="lineNum">      85 </span>            : </a>
 <a name="86"><span class="lineNum">      86 </span>            : template&lt;typename Alloc, typename T&gt;</a>
 <a name="87"><span class="lineNum">      87 </span>            : void set_allocator_for_deleter(AllocatorDeleter&lt;T&gt; * deleter, Alloc * alloc)</a>
