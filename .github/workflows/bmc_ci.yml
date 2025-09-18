@@ -1,4 +1,4 @@
-name: ROS2 Foxy CI
+name: ROS2 Humble CI
 
 on:
   push:
@@ -19,43 +19,29 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      with: 
-        name: test-results
-        path: test_results/
 
     - name: Set up ROS 2 humble
       uses: ros-tooling/setup-ros@main
       with:
         required-ros-distributions: humble
-    - name: install ros2 packages
+
+    - name: Install ros2 packages
       run: |
         sudo apt update
         sudo apt install -y ros-humble-ros-base
 
     - name: Install dependencies
       run: |
-        set -ex  # Echo commands and exit on error
-
-        echo "Running apt update..."
+        set -ex
         sudo apt update -y
-
-        echo "Installing required packages..."
         sudo apt install -y \
           python3-colcon-common-extensions \
           lcov \
           cppcheck \
           gcovr \
           python3-pip
-
-        echo "Upgrading pip..."
         pip3 install --upgrade pip
-
-        echo "Installing pytest and pytest-cov..."
         pip3 install pytest pytest-cov
-
-        echo "Dependencies installed successfully!"
 
     - name: Clean old build
       run: rm -rf build/ install/ log/
@@ -63,7 +49,17 @@ jobs:
     - name: Run cppcheck
       run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ --suppress=missingIncludeSystem src/
 
+    - name: Install dev tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake g++-11 gcc-11 libstdc++-11-dev
 
+
+    - name: Debug compiler
+      run: |
+        g++ --version
+        echo "CMake CXX Standard:"
+        grep -R CMAKE_CXX_STANDARD build/ || true
     - name: Build with coverage flags
       run: |
         source /opt/ros/humble/setup.bash
@@ -79,6 +75,13 @@ jobs:
         source install/setup.bash
         GTEST_OUTPUT="xml:test_results" colcon test --packages-select cpp_pubsub
         colcon test-result --verbose
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with: 
+        name: test-results
+        path: test_results/
+        
         
     - name: Run nodes to generate coverage
       run: |
@@ -99,7 +102,7 @@ jobs:
         echo "Line coverage: $line_cov%"
         cov_int=${line_cov%.*}
         if [ $cov_int -lt 20 ]; then
-          echo "Coverage ($cov_int%) is below threshold (10%)"
+          echo "Coverage ($cov_int%) is below threshold (20%)"
           exit 1
         else
           echo "Coverage check passed"
@@ -110,3 +113,15 @@ jobs:
       with:
         name: coverage-report
         path: coverage_report
+
+
+  docker-build:
+    name: Docker Build Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t ros2_package_build .
+
