@@ -48,6 +48,13 @@ jobs:
 
     - name: Run cppcheck
       run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ --suppress=missingIncludeSystem src/
+
+    - name: Install dev tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake g++-11 gcc-11 libstdc++-11-dev
+
+
     - name: Debug compiler
       run: |
         g++ --version
