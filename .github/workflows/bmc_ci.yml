@@ -48,7 +48,11 @@ jobs:
 
     - name: Run cppcheck
       run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ --suppress=missingIncludeSystem src/
-
+    - name: Debug compiler
+      run: |
+        g++ --version
+        echo "CMake CXX Standard:"
+        grep -R CMAKE_CXX_STANDARD build/ || true
     - name: Build with coverage flags
       run: |
         source /opt/ros/humble/setup.bash
