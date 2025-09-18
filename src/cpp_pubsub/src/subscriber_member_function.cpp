@@ -19,7 +19,7 @@
 using std::placeholders::_1;
 
 int unused_var = 42;
-
+aaa
 class MinimalSubscriber : public rclcpp::Node
 {
 public:
