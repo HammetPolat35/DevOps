@@ -88,14 +88,14 @@ jobs:
         source install/setup.bash
         lcov --capture --directory build/cpp_pubsub --output-file coverage.info
         lcov --remove coverage.info '/usr/*' '*/test/*' --output-file coverage_filtered.info
-        
+        genhtml coverage_filtered.info --output-directory coverage_report
 
     - name: ⛔ Fail if coverage < 10%
       run: |
         line_cov=$(lcov --summary coverage_filtered.info | grep "lines" | awk '{print $2}' | tr -d '%')
         echo "Line coverage: $line_cov%"
         cov_int=${line_cov%.*}
-        if [ $cov_int -lt 101 ]; then
+        if [ $cov_int -lt 10 ]; then
           echo "❌ Coverage ($cov_int%) is below threshold (10%)"
           exit 1
         else
