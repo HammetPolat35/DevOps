@@ -63,6 +63,7 @@ jobs:
 
     - name: 🛠️ Build with coverage flags
       run: |
+        source /opt/ros/humble/setup.bash
         colcon build --packages-select cpp_pubsub \
           --cmake-clean-cache \
           --cmake-args -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug
