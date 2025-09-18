@@ -14,16 +14,16 @@ jobs:
       COLCON_DEFAULTS_FILE: colcon.defaults.yaml
 
     steps:
-    - name: 📥 Checkout code
+    - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: 📤 Upload test results
+    - name: Upload test results
       uses: actions/upload-artifact@v4
       with: 
         name: test-results
         path: test_results/
 
-    - name: ⚙️ Set up ROS 2 humble
+    - name: Set up ROS 2 humble
       uses: ros-tooling/setup-ros@main
       with:
         required-ros-distributions: humble
@@ -32,14 +32,14 @@ jobs:
         sudo apt update
         sudo apt install -y ros-humble-ros-base
 
-    - name: 🧪 Install dependencies
+    - name: Install dependencies
       run: |
         set -ex  # Echo commands and exit on error
 
-        echo "🔄 Running apt update..."
+        echo "Running apt update..."
         sudo apt update -y
 
-        echo "📦 Installing required packages..."
+        echo "Installing required packages..."
         sudo apt install -y \
           python3-colcon-common-extensions \
           lcov \
@@ -47,31 +47,31 @@ jobs:
           gcovr \
           python3-pip
 
-        echo "🐍 Upgrading pip..."
+        echo "Upgrading pip..."
         pip3 install --upgrade pip
 
-        echo "🐍 Installing pytest and pytest-cov..."
+        echo "Installing pytest and pytest-cov..."
         pip3 install pytest pytest-cov
 
-        echo "✅ Dependencies installed successfully!"
+        echo "Dependencies installed successfully!"
 
-    - name: 🧹 Clean old build
+    - name: Clean old build
       run: rm -rf build/ install/ log/
 
-    - name: 🔍 Run cppcheck
+    - name: Run cppcheck
       run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ src/
 
-    - name: 🛠️ Build with coverage flags
+    - name: Build with coverage flags
       run: |
         source /opt/ros/humble/setup.bash
         colcon build --packages-select cpp_pubsub \
           --cmake-clean-cache \
           --cmake-args -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug
 
-    - name: 🔁 Source the workspace
+    - name: Source the workspace
       run: source install/setup.bash
 
-    - name: ✅ Run unit tests
+    - name: Run unit tests
       run: |
         source install/setup.bash
         GTEST_OUTPUT="xml:test_results" colcon test --packages-select cpp_pubsub
@@ -83,26 +83,26 @@ jobs:
         timeout 5s ros2 run cpp_pubsub talker &
         timeout 5s ros2 run cpp_pubsub listener || true
 
-    - name: 📈 Generate coverage info
+    - name: Generate coverage info
       run: |
         source install/setup.bash
         lcov --capture --directory build/cpp_pubsub --output-file coverage.info
         lcov --remove coverage.info '/usr/*' '*/test/*' --output-file coverage_filtered.info
         genhtml coverage_filtered.info --output-directory coverage_report
 
-    - name: ⛔ Fail if coverage < 10%
+    - name: Fail if coverage < 10%
       run: |
         line_cov=$(lcov --summary coverage_filtered.info | grep "lines" | awk '{print $2}' | tr -d '%')
         echo "Line coverage: $line_cov%"
         cov_int=${line_cov%.*}
         if [ $cov_int -lt 10 ]; then
-          echo "❌ Coverage ($cov_int%) is below threshold (10%)"
+          echo "Coverage ($cov_int%) is below threshold (10%)"
           exit 1
         else
-          echo "✅ Coverage check passed"
+          echo "Coverage check passed"
         fi
 
-    - name: 📤 Upload coverage report as artifact
+    - name: Upload coverage report as artifact
       uses: actions/upload-artifact@v4
       with:
         name: coverage-report
