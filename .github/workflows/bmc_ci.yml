@@ -27,6 +27,10 @@ jobs:
       uses: ros-tooling/setup-ros@main
       with:
         required-ros-distributions: humble
+    - name: install ros2 packages
+      run: |
+        sudo apt update
+        sudo apt install -y ros-humble-ros-base
 
     - name: 🧪 Install dependencies
       run: |
