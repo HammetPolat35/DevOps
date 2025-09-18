@@ -11,14 +11,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-This will fail
+thisWillFail
 #include <memory>
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 using std::placeholders::_1;
 
-int unused_int=40;
+int unused_var = 42;
 
 class MinimalSubscriber : public rclcpp::Node
 {
