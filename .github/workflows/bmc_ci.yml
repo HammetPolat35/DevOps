@@ -59,7 +59,8 @@ jobs:
       run: rm -rf build/ install/ log/
 
     - name: Run cppcheck
-      run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ src/
+      run: cppcheck --enable=all --inconclusive --std=c++14 --language=c++ --suppress=missingIncludeSystem src/
+
 
     - name: Build with coverage flags
       run: |
