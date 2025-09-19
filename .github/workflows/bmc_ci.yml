@@ -114,9 +114,20 @@ jobs:
         name: coverage-report
         path: coverage_report
 
+
+  docker-build:
+    name: Docker Build Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t ros2_package_build .
   docker-publish:
     name: Publish Docker Image to GHCR
     runs-on: ubuntu-22.04
+    needs: docker-build   # ensures the build job runs first
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -130,10 +141,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
+          # Make repository name lowercase for GHCR
           IMAGE_NAME=ghcr.io/$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')/ros2_package:latest
-          echo "Pushing image: $IMAGE_NAME"
+          echo "Building and pushing image: $IMAGE_NAME"
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
-
-
-
