@@ -4,7 +4,7 @@
   tests="3"
   failures="1"
   errors="0"
-  time="0.009"
+  time="0.008"
 >
   <testcase
     name="src/publisher_member_function.cpp"

@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">26</td>
-            <td class="headerCovTableEntryLo">34.6 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -139,7 +139,7 @@
 <a name="77"><span class="lineNum">      77 </span>            :   &gt;,</a>
 <a name="78"><span class="lineNum">      78 </span>            :   typename NodeT&gt;</a>
 <a name="79"><span class="lineNum">      79 </span>            : typename std::shared_ptr&lt;SubscriptionT&gt;</a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          1 : create_subscription(</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineNoCov">          0 : create_subscription(</span></a>
 <a name="81"><span class="lineNum">      81 </span>            :   NodeT &amp;&amp; node,</a>
 <a name="82"><span class="lineNum">      82 </span>            :   const std::string &amp; topic_name,</a>
 <a name="83"><span class="lineNum">      83 </span>            :   const rclcpp::QoS &amp; qos,</a>
@@ -153,14 +153,14 @@
 <a name="91"><span class="lineNum">      91 </span>            : )</a>
 <a name="92"><span class="lineNum">      92 </span>            : {</a>
 <a name="93"><span class="lineNum">      93 </span>            :   using rclcpp::node_interfaces::get_node_topics_interface;</a>
-<a name="94"><span class="lineNum">      94 </span><span class="lineCov">          2 :   auto node_topics = get_node_topics_interface(std::forward&lt;NodeT&gt;(node));</span></a>
+<a name="94"><span class="lineNum">      94 </span><span class="lineNoCov">          0 :   auto node_topics = get_node_topics_interface(std::forward&lt;NodeT&gt;(node));</span></a>
 <a name="95"><span class="lineNum">      95 </span>            : </a>
 <a name="96"><span class="lineNum">      96 </span>            :   std::shared_ptr&lt;rclcpp::topic_statistics::SubscriptionTopicStatistics&lt;CallbackMessageT&gt;&gt;</a>
-<a name="97"><span class="lineNum">      97 </span><span class="lineCov">          2 :   subscription_topic_stats = nullptr;</span></a>
+<a name="97"><span class="lineNum">      97 </span><span class="lineNoCov">          0 :   subscription_topic_stats = nullptr;</span></a>
 <a name="98"><span class="lineNum">      98 </span>            : </a>
-<a name="99"><span class="lineNum">      99 </span><span class="lineCov">          1 :   if (rclcpp::detail::resolve_enable_topic_statistics(</span></a>
+<a name="99"><span class="lineNum">      99 </span><span class="lineNoCov">          0 :   if (rclcpp::detail::resolve_enable_topic_statistics(</span></a>
 <a name="100"><span class="lineNum">     100 </span>            :       options,</a>
-<a name="101"><span class="lineNum">     101 </span><span class="lineCov">          1 :       *node_topics-&gt;get_node_base_interface()))</span></a>
+<a name="101"><span class="lineNum">     101 </span><span class="lineNoCov">          0 :       *node_topics-&gt;get_node_base_interface()))</span></a>
 <a name="102"><span class="lineNum">     102 </span>            :   {</a>
 <a name="103"><span class="lineNum">     103 </span><span class="lineNoCov">          0 :     if (options.topic_stats_options.publish_period &lt;= std::chrono::milliseconds(0)) {</span></a>
 <a name="104"><span class="lineNum">     104 </span>            :       throw std::invalid_argument(</a>
@@ -203,17 +203,17 @@
 <a name="141"><span class="lineNum">     141 </span><span class="lineNoCov">          0 :     subscription_topic_stats-&gt;set_publisher_timer(timer);</span></a>
 <a name="142"><span class="lineNum">     142 </span>            :   }</a>
 <a name="143"><span class="lineNum">     143 </span>            : </a>
-<a name="144"><span class="lineNum">     144 </span><span class="lineCov">          3 :   auto factory = rclcpp::create_subscription_factory&lt;MessageT&gt;(</span></a>
+<a name="144"><span class="lineNum">     144 </span><span class="lineNoCov">          0 :   auto factory = rclcpp::create_subscription_factory&lt;MessageT&gt;(</span></a>
 <a name="145"><span class="lineNum">     145 </span>            :     std::forward&lt;CallbackT&gt;(callback),</a>
 <a name="146"><span class="lineNum">     146 </span>            :     options,</a>
 <a name="147"><span class="lineNum">     147 </span>            :     msg_mem_strat,</a>
 <a name="148"><span class="lineNum">     148 </span>            :     subscription_topic_stats</a>
 <a name="149"><span class="lineNum">     149 </span>            :   );</a>
 <a name="150"><span class="lineNum">     150 </span>            : </a>
-<a name="151"><span class="lineNum">     151 </span><span class="lineCov">          2 :   auto sub = node_topics-&gt;create_subscription(topic_name, factory, qos);</span></a>
-<a name="152"><span class="lineNum">     152 </span><span class="lineCov">          1 :   node_topics-&gt;add_subscription(sub, options.callback_group);</span></a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineNoCov">          0 :   auto sub = node_topics-&gt;create_subscription(topic_name, factory, qos);</span></a>
+<a name="152"><span class="lineNum">     152 </span><span class="lineNoCov">          0 :   node_topics-&gt;add_subscription(sub, options.callback_group);</span></a>
 <a name="153"><span class="lineNum">     153 </span>            : </a>
-<a name="154"><span class="lineNum">     154 </span><span class="lineCov">          2 :   return std::dynamic_pointer_cast&lt;SubscriptionT&gt;(sub);</span></a>
+<a name="154"><span class="lineNum">     154 </span><span class="lineNoCov">          0 :   return std::dynamic_pointer_cast&lt;SubscriptionT&gt;(sub);</span></a>
 <a name="155"><span class="lineNum">     155 </span>            : }</a>
 <a name="156"><span class="lineNum">     156 </span>            : </a>
 <a name="157"><span class="lineNum">     157 </span>            : }  // namespace rclcpp</a>

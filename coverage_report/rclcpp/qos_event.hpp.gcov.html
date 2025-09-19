@@ -31,18 +31,18 @@
             <td class="headerValue">coverage_filtered.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">18</td>
-            <td class="headerCovTableEntryLo">55.6 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2025-09-17 20:48:28</td>
+            <td class="headerValue">2025-09-18 08:52:53</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">18</td>
-            <td class="headerCovTableEntryLo">11.1 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -169,21 +169,21 @@
 <a name="107"><span class="lineNum">     107 </span>            : {</a>
 <a name="108"><span class="lineNum">     108 </span>            : public:</a>
 <a name="109"><span class="lineNum">     109 </span>            :   template&lt;typename InitFuncT, typename EventTypeEnum&gt;</a>
-<a name="110"><span class="lineNum">     110 </span><span class="lineCov">          2 :   QOSEventHandler(</span></a>
+<a name="110"><span class="lineNum">     110 </span><span class="lineNoCov">          0 :   QOSEventHandler(</span></a>
 <a name="111"><span class="lineNum">     111 </span>            :     const EventCallbackT &amp; callback,</a>
 <a name="112"><span class="lineNum">     112 </span>            :     InitFuncT init_func,</a>
 <a name="113"><span class="lineNum">     113 </span>            :     ParentHandleT parent_handle,</a>
 <a name="114"><span class="lineNum">     114 </span>            :     EventTypeEnum event_type)</a>
-<a name="115"><span class="lineNum">     115 </span><span class="lineCov">          6 :   : event_callback_(callback)</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineNoCov">          0 :   : event_callback_(callback)</span></a>
 <a name="116"><span class="lineNum">     116 </span>            :   {</a>
-<a name="117"><span class="lineNum">     117 </span><span class="lineCov">          2 :     parent_handle_ = parent_handle;</span></a>
-<a name="118"><span class="lineNum">     118 </span><span class="lineCov">          2 :     event_handle_ = rcl_get_zero_initialized_event();</span></a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineCov">          2 :     rcl_ret_t ret = init_func(&amp;event_handle_, parent_handle.get(), event_type);</span></a>
-<a name="120"><span class="lineNum">     120 </span><span class="lineCov">          2 :     if (ret != RCL_RET_OK) {</span></a>
-<a name="121"><span class="lineNum">     121 </span><span class="lineCov">          2 :       if (ret == RCL_RET_UNSUPPORTED) {</span></a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineCov">          6 :         UnsupportedEventTypeException exc(ret, rcl_get_error_state(), &quot;Failed to initialize event&quot;);</span></a>
-<a name="123"><span class="lineNum">     123 </span><span class="lineCov">          2 :         rcl_reset_error();</span></a>
-<a name="124"><span class="lineNum">     124 </span><span class="lineCov">          2 :         throw exc;</span></a>
+<a name="117"><span class="lineNum">     117 </span><span class="lineNoCov">          0 :     parent_handle_ = parent_handle;</span></a>
+<a name="118"><span class="lineNum">     118 </span><span class="lineNoCov">          0 :     event_handle_ = rcl_get_zero_initialized_event();</span></a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineNoCov">          0 :     rcl_ret_t ret = init_func(&amp;event_handle_, parent_handle.get(), event_type);</span></a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineNoCov">          0 :     if (ret != RCL_RET_OK) {</span></a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineNoCov">          0 :       if (ret == RCL_RET_UNSUPPORTED) {</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineNoCov">          0 :         UnsupportedEventTypeException exc(ret, rcl_get_error_state(), &quot;Failed to initialize event&quot;);</span></a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineNoCov">          0 :         rcl_reset_error();</span></a>
+<a name="124"><span class="lineNum">     124 </span><span class="lineNoCov">          0 :         throw exc;</span></a>
 <a name="125"><span class="lineNum">     125 </span>            :       } else {</a>
 <a name="126"><span class="lineNum">     126 </span><span class="lineNoCov">          0 :         rclcpp::exceptions::throw_from_rcl_error(ret, &quot;Failed to initialize event&quot;);</span></a>
 <a name="127"><span class="lineNum">     127 </span>            :       }</a>

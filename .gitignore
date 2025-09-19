@@ -1,0 +1,35 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Coverage reports
+coverage_report/
+coverage.info
+coverage_filtered.info
+test_results/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor / IDE files
+.vscode/
+*.swp
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker-related
+*.tar
+docker-compose.override.yml
+
+# GitHub Actions secrets (never commit!)
+.env
+*.env
+
+# Misc
+*.bak
+*.tmp
+

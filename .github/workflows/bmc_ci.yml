@@ -125,3 +125,27 @@ jobs:
       - name: Build Docker image
         run: docker build -t ros2_package_build .
 
+  docker-publish:
+    name: Publish Docker Image to GHCR
+    runs-on: ubuntu-22.04
+    needs: docker-build
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          IMAGE_NAME=ghcr.io/hammetpolat35/devops/ros2_package:latest
+          echo "Building and pushing image: $IMAGE_NAME"
+          docker build -t $IMAGE_NAME .
+          docker push $IMAGE_NAME
