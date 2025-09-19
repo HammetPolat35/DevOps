@@ -142,7 +142,9 @@ jobs:
 
       - name: Tag and push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository }}/ros2_package:latest
+          IMAGE_NAME=ghcr.io/$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')/ros2_package:latest
+        echo "Pushing image: $IMAGE_NAME"
           docker tag ros2_package_build $IMAGE_NAME
           docker push $IMAGE_NAME
+
 
