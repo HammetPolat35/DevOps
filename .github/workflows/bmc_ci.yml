@@ -124,6 +124,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t ros2_package_build .
+
   docker-publish:
     name: Publish Docker Image to GHCR
     runs-on: ubuntu-22.04
