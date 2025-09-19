@@ -127,7 +127,10 @@ jobs:
   docker-publish:
     name: Publish Docker Image to GHCR
     runs-on: ubuntu-22.04
-    needs: docker-build   # ensures the build job runs first
+    needs: docker-build
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
