@@ -141,7 +141,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/hammetpolat35/ros2_package:latest
+          IMAGE_NAME=ghcr.io/hammetpolat35/devops/ros2_package:latest
           echo "Building and pushing image: $IMAGE_NAME"
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
