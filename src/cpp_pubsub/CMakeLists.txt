@@ -39,7 +39,9 @@ install(TARGETS
 if(BUILD_TESTING)
   #find_package(ament_lint_auto REQUIRED)
   #ament_lint_auto_find_test_dependencies()
-
+  find_package(ament_cmake_pytest REQUIRED)
+  ament_add_pytest_test(test_pubsub_integration test/test_pubsub_integration.py)
+  
   find_package(ament_cmake_gtest REQUIRED)
 
   ament_add_gtest(test_my_node test/test_my_node.cpp)
