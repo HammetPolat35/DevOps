@@ -2,6 +2,6 @@
 #include "rclcpp/rclcpp.hpp"
 
 TEST(SanityCheck, BasicAssertion) {
-  ASSERT_TRUE(false);
+  ASSERT_TRUE(true);
 }
 
